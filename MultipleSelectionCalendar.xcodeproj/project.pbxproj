@@ -16,6 +16,8 @@
 		4D4D80B82C9FC6BE00982A76 /* MultipleSelectionCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D80B72C9FC6BE00982A76 /* MultipleSelectionCalendarTests.swift */; };
 		4D4D80C22C9FC6BE00982A76 /* MultipleSelectionCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D80C12C9FC6BE00982A76 /* MultipleSelectionCalendarUITests.swift */; };
 		4D4D80C42C9FC6BE00982A76 /* MultipleSelectionCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4D80C32C9FC6BE00982A76 /* MultipleSelectionCalendarUITestsLaunchTests.swift */; };
+		4D4D80D42C9FC80000982A76 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4D80D32C9FC80000982A76 /* SnapKit */; };
+		4D4D80D62C9FC80400982A76 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4D80D52C9FC80400982A76 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4D80D42C9FC80000982A76 /* SnapKit in Frameworks */,
+				4D4D80D62C9FC80400982A76 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 				4D4D80B62C9FC6BE00982A76 /* MultipleSelectionCalendarTests */,
 				4D4D80C02C9FC6BE00982A76 /* MultipleSelectionCalendarUITests */,
 				4D4D809E2C9FC6BD00982A76 /* Products */,
+				4D4D80D22C9FC80000982A76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,13 @@
 			path = MultipleSelectionCalendarUITests;
 			sourceTree = "<group>";
 		};
+		4D4D80D22C9FC80000982A76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +155,10 @@
 			dependencies = (
 			);
 			name = MultipleSelectionCalendar;
+			packageProductDependencies = (
+				4D4D80D32C9FC80000982A76 /* SnapKit */,
+				4D4D80D52C9FC80400982A76 /* FSCalendar */,
+			);
 			productName = MultipleSelectionCalendar;
 			productReference = 4D4D809D2C9FC6BD00982A76 /* MultipleSelectionCalendar.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 4D4D80942C9FC6BD00982A76;
+			packageReferences = (
+				4D4D80D02C9FC6DF00982A76 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4D4D80D12C9FC71300982A76 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 4D4D809E2C9FC6BD00982A76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -450,6 +470,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +499,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +629,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D4D80D02C9FC6DF00982A76 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		4D4D80D12C9FC71300982A76 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D4D80D32C9FC80000982A76 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4D80D02C9FC6DF00982A76 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4D4D80D52C9FC80400982A76 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4D80D12C9FC71300982A76 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D4D80952C9FC6BD00982A76 /* Project object */;
 }
